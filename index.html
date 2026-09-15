@@ -301,7 +301,7 @@
       <header class="masthead">
         <div>
           <h1>Orario</h1>
-          <p class="sub">Carica un file .ics: consultalo a lista o a calendario, cerca e ripulisci i corsi che non ti servono.</p>
+          <p class="sub">Carica un file .ics: consultalo a lista o a calendario, cerca e ripulisci gli eventi che non ti servono.</p>
         </div>
         <div class="today" id="todayLabel"></div>
       </header>
@@ -357,10 +357,10 @@
 
       <details class="manage" id="manage" style="display:none;">
         <summary><span class="arrow">›</span> Gestisci Eventi</summary>
-        <p class="manage-sub">Seleziona uno o più corsi per rimuoverli da tutte le date, poi scarica il calendario aggiornato.</p>
+        <p class="manage-sub">Seleziona uno o più eventi per rimuoverli da tutte le date, poi scarica il calendario aggiornato.</p>
         <div class="manage-body">
           <div class="manage-filter">
-            <input type="text" id="courseFilter" placeholder="Filtra l'elenco corsi…">
+            <input type="text" id="courseFilter" placeholder="Filtra l'elenco degli eventi…">
           </div>
           <div class="course-list" id="courseList"></div>
           <div class="manage-actions">
@@ -961,7 +961,7 @@
           renderCourseList(courseFilter.value);
           render();
           updateManageState();
-          showToast('Rimossi ' + checked.length + ' corsi (' + removedCount + ' eventi).');
+          showToast('Rimossi ' + checked.length + ' eventi (' + removedCount + ' eventi).');
         });
 
         resetBtn.addEventListener('click', function(){
